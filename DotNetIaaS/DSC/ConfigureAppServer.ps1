@@ -216,6 +216,7 @@ Configuration Main
         SetScript ={
             $source = "http://go.microsoft.com/fwlink/?LinkId=255386"
             $destination = "C:\WindowsAzure\wpilauncher.exe"
+            [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
             Invoke-WebRequest $source -OutFile $destination
        
         }
